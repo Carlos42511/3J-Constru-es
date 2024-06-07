@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  /* Adicione as propriedades de background desejadas */
+  background-image: url('../../img/faleconoscoback.jpg');
+  background-size: cover;
+  /* Ajuste conforme necessário */
+  background-position: center;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Garante que o background fique por trás de outros elementos */
+}
+
+.top-bar {
+  display: flex;
+  justify-content: center;
+  /* Centraliza os itens horizontalmente */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  /* Remova a decoração padrão do link, se desejar */
+}
+
+.top-bar a:hover {
+  text-decoration: underline;
+  /* Adicione um sublinhado ao passar o mouse, se desejar */
+}
+
+.top-bar p {
+  margin: 0;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 0px;
+}
+
+nav img {
+  max-height: 300px;
+  /* Reduzi a altura para melhor visualização */
+  width: auto;
+  margin-right: 80px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  /* Reduzi o espaçamento entre os itens */
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 0 5px; /* Adicione margem entre os itens */
+  transition: transform 0.3s ease-in-out; /* Adicione uma transição suave ao transformar */
+}
+
+nav li:hover {
+  transform: translateY(-5px); /* Mova o item para cima ao passar o mouse */
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00f7ff;
+  border-color: #00f7ff; /* Altere a cor da borda ao passar o mouse */
+}
+
+/* Centralizar os itens no meio da barra de navegação */
+ul {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Adiciona uma media query para ajustar o layout em telas menores */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    /* Empilha os itens verticalmente em telas menores */
+    align-items: center;
+    /* Alinha os itens ao centro */
+    text-align: center;
+    /* Centraliza o texto */
+  }
+
+  ul {
+    margin-top: 15px;
+    /* Adiciona um espaçamento superior entre o logo e a lista */
+    gap: 10px;
+    /* Reduz o espaçamento entre os itens empilhados */
+  }
+}
+
+
+.container {
+  width: 440px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.logo img {
+  width: 100%;
+  /* Faz a imagem ocupar 100% da largura do .logo */
+  height: auto;
+  /* Permite que a altura seja ajustada automaticamente para manter a proporção */
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+/* Mantenha o seu CSS existente aqui */
+
+/* Adicione essas regras no final do seu arquivo CSS */
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+  nav img {
+    margin-right: 0;
+    /* Remova a margem à direita na versão móvel */
+  }
+
+  nav ul {
+    flex-direction: column;
+    /* Empilha os itens verticalmente em telas menores */
+    gap: 10px;
+    /* Espaçamento entre os itens */
+  }
+
+  nav li {
+    font-size: 16px;
+    /* Reduza o tamanho da fonte dos itens do menu */
+  }
+
+  .container {
+    width: 90%;
+    /* Ajuste a largura do container para ocupar 90% da largura da tela */
+    margin: 20px auto;
+    /* Adicione uma margem para centralizar o container */
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+    /* Reduza a margem inferior entre os grupos de formulários */
+  }
+
+  label {
+    font-size: 16px;
+    /* Ajuste o tamanho da fonte das labels */
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    /* Aumente o preenchimento dos campos de entrada */
+  }
+
+  .top-bar {
+    padding: 10px;
+  }
+
+  .top-bar p {
+    margin-right: 0;
+    font-size: 12px;
+    /* Reduz a fonte para economizar espaço */
+  }
+}
+
+
+/* Seu CSS existente aqui */
